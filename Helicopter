@@ -1,0 +1,56 @@
+--Fe copter by Pepa#666, or N5RTO_N5TO on roblox!
+--have fun!
+--hats: https://www.roblox.com/catalog/6470135113/Fan-Hand-Sign-Why-Dont-We-WDW
+--hats:https://www.roblox.com/catalog/7583352167/Vector-Arrow
+HumanDied = false
+local reanim
+local te
+local ct
+local m
+function noplsmesh(hat)
+_G.OldCF=workspace.Camera.CFrame
+oldchar=game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character=workspace[game.Players.LocalPlayer.Name]
+for i,v in next, workspace[game.Players.LocalPlayer.Name][hat]:GetDescendants() do
+if v:IsA('Mesh') or v:IsA('SpecialMesh') then
+v:Remove()
+end
+end
+game.Players.LocalPlayer.Character=oldchar
+wait()
+workspace.Camera.CFrame=_G.OldCF
+game.Players.LocalPlayer.Character=oldchar
+end
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/XeneonPlays/Nexo/main/NexoReanimate'),true))()
+ 
+IT = Instance.new
+CF = CFrame.new
+VT = Vector3.new
+RAD = math.rad
+C3 = Color3.new
+UD2 = UDim2.new
+BRICKC = BrickColor.new
+ANGLES = CFrame.Angles
+EULER = CFrame.fromEulerAnglesXYZ
+COS = math.cos
+ACOS = math.acos
+SIN = math.sin
+ASIN = math.asin
+ABS = math.abs
+MRANDOM = math.random
+FLOOR = math.floor
+ 
+speed = 1
+sine = 1
+srv = game:GetService('RunService')
+ 
+function hatset(yes,part,c1,c0,nm)
+reanim[yes].Handle.AccessoryWeld.Part1=reanim[part]
+reanim[yes].Handle.AccessoryWeld.C1=c1 or CFrame.new()
+reanim[yes].Handle.AccessoryWeld.C0=c0 or CFrame.new()--3bbb322dad5929d0d4f25adcebf30aa5
+if nm==true then
+noplsmesh(yes)
+end
+end
+ 
+--put the hat script converted below
